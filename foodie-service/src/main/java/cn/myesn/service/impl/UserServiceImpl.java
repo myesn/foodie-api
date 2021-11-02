@@ -34,6 +34,13 @@ public class UserServiceImpl implements UserService {
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public boolean existsUserName(String username) {
+        // 测试 aop 记录方法调用时长
+//        try {
+//            Thread.sleep(2500);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+
         final Example example = new Example(Users.class);
         final Example.Criteria userCriteria = example.createCriteria();
         userCriteria.andEqualTo("username", username);

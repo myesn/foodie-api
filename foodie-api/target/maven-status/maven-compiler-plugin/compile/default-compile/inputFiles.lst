@@ -2,5 +2,6 @@ C:\dev\test\java\java-architects\foodie\foodie-api\src\main\java\cn\myesn\config
 C:\dev\test\java\java-architects\foodie\foodie-api\src\main\java\cn\myesn\controller\HiController.java
 C:\dev\test\java\java-architects\foodie\foodie-api\src\main\java\cn\myesn\Application.java
 C:\dev\test\java\java-architects\foodie\foodie-api\src\main\java\cn\myesn\controller\PassportController.java
+C:\dev\test\java\java-architects\foodie\foodie-api\src\main\java\cn\myesn\aspect\ServiceLogAspect.java
 C:\dev\test\java\java-architects\foodie\foodie-api\src\main\java\cn\myesn\controller\StuController.java
 C:\dev\test\java\java-architects\foodie\foodie-api\src\main\java\cn\myesn\config\Swagger2Config.java
