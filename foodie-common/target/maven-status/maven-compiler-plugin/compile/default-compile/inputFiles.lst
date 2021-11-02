@@ -14,6 +14,7 @@ C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\org\n3r\idwo
 C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\org\n3r\idworker\utils\Props.java
 C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\org\n3r\idworker\Test.java
 C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\org\n3r\idworker\utils\HttpReq.java
+C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\cn\myesn\utils\CookieUtils.java
 C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\cn\myesn\exception\GlobalExceptionResponseResult.java
 C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\org\n3r\idworker\Sid.java
 C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\org\n3r\idworker\strategy\DefaultRandomCodeStrategy.java
@@ -24,3 +25,4 @@ C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\org\n3r\idwo
 C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\org\n3r\idworker\utils\Serializes.java
 C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\org\n3r\idworker\strategy\DayPrefixRandomCodeStrategy.java
 C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\cn\myesn\enums\GenderEnum.java
+C:\dev\test\java\java-architects\foodie\foodie-common\src\main\java\cn\myesn\utils\JsonUtils.java

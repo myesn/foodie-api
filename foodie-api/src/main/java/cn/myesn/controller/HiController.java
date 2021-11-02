@@ -1,5 +1,7 @@
 package cn.myesn.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,8 +15,15 @@ import javax.servlet.http.HttpSession;
 @RestController
 public class HiController {
 
+    private final static Logger logger = LoggerFactory.getLogger(HiController.class);
+
     @GetMapping("hi")
     public ResponseEntity<String> hi(){
+        logger.debug("hi");
+        logger.info("hi");
+        logger.warn("hi");
+        logger.error("hi");
+
         return ResponseEntity.ok("hi");
     }
 
