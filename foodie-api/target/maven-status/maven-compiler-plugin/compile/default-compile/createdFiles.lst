@@ -1,0 +1,5 @@
+cn\myesn\controller\StuController.class
+cn\myesn\Application.class
+cn\myesn\controller\HiController.class
+cn\myesn\controller\PassportController.class
+cn\myesn\config\Swagger2Config.class

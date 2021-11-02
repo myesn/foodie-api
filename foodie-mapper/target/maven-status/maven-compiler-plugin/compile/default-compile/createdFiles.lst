@@ -1,0 +1,14 @@
+cn\myesn\mapper\StuMapper.class
+cn\myesn\mapper\CategoryMapper.class
+cn\myesn\my\mapper\MyMapper.class
+cn\myesn\mapper\ItemsParamMapper.class
+cn\myesn\mapper\UserAddressMapper.class
+cn\myesn\mapper\CarouselMapper.class
+cn\myesn\mapper\UsersMapper.class
+cn\myesn\mapper\ItemsMapper.class
+cn\myesn\mapper\OrdersMapper.class
+cn\myesn\mapper\ItemsCommentsMapper.class
+cn\myesn\mapper\ItemsImgMapper.class
+cn\myesn\mapper\ItemsSpecMapper.class
+cn\myesn\mapper\OrderStatusMapper.class
+cn\myesn\mapper\OrderItemsMapper.class

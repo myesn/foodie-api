@@ -1,0 +1,31 @@
+server:
+  port: 8000
+#  tomcat:
+#    uri-encoding: UTF-8
+  max-http-header-size: 80KB
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver # mysql-connector-java 8.x 版本用这个驱动
+    url: jdbc:mysql://localhost:3306/foodie-shop-dev?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: P@ssw0rd
+    hikari:
+      connection-timeout: 30000
+      minimum-idle: 5
+      maximum-pool-size: 20
+      auto-commit: true
+      idle-timeout: 600000
+      pool-name: DataSourceHikariCP
+      max-lifetime: 1800000
+      connection-test-query: select 1
+
+mybatis:
+  type-aliases-package: cn.myesn.pojo       # 所有 POJO 类所在的包路径
+  mapper-locations: classpath:mapper/*.xml  # mapper.xml 文件路径
+
+mapper:
+  mappers: cn.myesn.my.mapper.MyMapper
+  not-empty: false # 在进行数据库操作的时候，判断表达式 id != null，是否追加 id != ''，建议配置为 false 关闭此功能
+  identity: MYSQL
