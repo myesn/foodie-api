@@ -52,7 +52,7 @@ public class PassportController {
     }
 
     @ApiOperation(value = "用户登录", notes = "用户登录", httpMethod = "POST")
-    @PostMapping("signin")
+    @PostMapping("sign-in")
     public ResponseEntity<Users> signin(@RequestBody UserBO userBO,
                                         HttpServletRequest request,
                                         HttpServletResponse response) throws NoSuchAlgorithmException {
