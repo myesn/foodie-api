@@ -24,6 +24,8 @@ spring:
 mybatis:
   type-aliases-package: cn.myesn.pojo       # 所有 POJO 类所在的包路径
   mapper-locations: classpath:mapper/*.xml  # mapper.xml 文件路径
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 启用日志
 
 mapper:
   mappers: cn.myesn.my.mapper.MyMapper
