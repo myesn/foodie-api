@@ -24,6 +24,8 @@ public class PassportController {
 
     private final UserService userService;
 
+    private static final String COOKIE_KEY = "foodie-user";
+
     public PassportController(UserService userService) {
         this.userService = userService;
     }
@@ -60,12 +62,25 @@ public class PassportController {
         final Users user = userService.login(userBO.getUsername(), userBO.getPassword());
 
         protectPrivacy(user);
+
         CookieUtils.setCookie(request, response,
-                "foodie-user",
+                COOKIE_KEY,
                 JsonUtils.objectToJson(user),
                 true);
 
         return ResponseEntity.ok(user);
+    }
+
+
+    @ApiOperation(value = "用户退出登录", notes = "用户退出登录", httpMethod = "POST")
+    @PostMapping("sign-out")
+    public ResponseEntity<?> signOut(@RequestParam String userId, HttpServletRequest request, HttpServletResponse response) {
+        CookieUtils.deleteCookie(request, response, COOKIE_KEY);
+
+        // todo: 清空购物车
+        // todo: 分布式会话中，清除用户数据
+
+        return ResponseEntity.ok().build();
     }
 
 
