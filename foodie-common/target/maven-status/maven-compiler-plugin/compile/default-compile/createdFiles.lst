@@ -1,5 +1,6 @@
 org\n3r\idworker\Id.class
 org\n3r\idworker\strategy\DefaultRandomCodeStrategy.class
+cn\myesn\enums\YesOrNoEnum.class
 org\n3r\idworker\utils\HttpReq.class
 org\n3r\idworker\Code.class
 org\n3r\idworker\strategy\FileLock.class

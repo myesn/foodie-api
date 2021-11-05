@@ -1,3 +1,4 @@
+cn\myesn\controller\HomeController.class
 cn\myesn\controller\StuController.class
 cn\myesn\Application.class
 cn\myesn\aspect\ServiceLogAspect.class
