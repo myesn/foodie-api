@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.myesn.mapper.CategoryMapperCustom" >
+
+
+  <resultMap id="myCategoryVo" type="cn.myesn.pojo.vo.CategoryVo">
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="fatherId" property="fatherId" jdbcType="INTEGER" />
+    <collection property="subCategories" ofType="cn.myesn.pojo.vo.CategoryVo$SubCategoryVo">
+      <id column="subId" property="subId" jdbcType="INTEGER" />
+      <result column="subName" property="subName" jdbcType="VARCHAR" />
+      <result column="subType" property="subType" jdbcType="INTEGER" />
+      <result column="subFatherId" property="subFatherId" jdbcType="INTEGER" />
+    </collection>
+  </resultMap>
+
+  <select id="getSubCategories" resultMap="myCategoryVo" parameterType="int">
+    select
+      f.id  as id,
+      f.name as name,
+      f.`type` as `type`,
+      f.father_id  as fatherId,
+      c.id as subId,
+      c.name as subName,
+      c.`type` as subType,
+      c.father_id as subFatherId
+    from category f
+    left join category c on f.id = c.father_id
+    where f.father_id = #{rootCategoryId}
+  </select>
+
+</mapper>
