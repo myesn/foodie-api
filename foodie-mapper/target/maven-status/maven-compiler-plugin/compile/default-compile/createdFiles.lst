@@ -9,6 +9,7 @@ cn\myesn\mapper\ItemsMapper.class
 cn\myesn\mapper\OrdersMapper.class
 cn\myesn\mapper\ItemsCommentsMapper.class
 cn\myesn\mapper\ItemsImgMapper.class
+cn\myesn\mapper\CategoryMapperCustom.class
 cn\myesn\mapper\ItemsSpecMapper.class
 cn\myesn\mapper\OrderStatusMapper.class
 cn\myesn\mapper\OrderItemsMapper.class
