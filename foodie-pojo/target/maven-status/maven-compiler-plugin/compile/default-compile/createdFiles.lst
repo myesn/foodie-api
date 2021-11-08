@@ -3,9 +3,11 @@ cn\myesn\pojo\ItemsComments.class
 cn\myesn\pojo\ItemsImg.class
 cn\myesn\pojo\Stu.class
 cn\myesn\pojo\OrderItems.class
+cn\myesn\pojo\vo\CategoryVo$SubCategoryVo.class
 cn\myesn\pojo\bo\UserBO.class
 cn\myesn\pojo\UserAddress.class
 cn\myesn\pojo\Items.class
+cn\myesn\pojo\vo\CategoryVo.class
 cn\myesn\pojo\Users.class
 cn\myesn\pojo\Category.class
 cn\myesn\pojo\ItemsParam.class
