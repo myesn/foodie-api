@@ -27,7 +27,7 @@
       c.`type` as subType,
       c.father_id as subFatherId
     from category f
-    left join category c on f.id = c.father_id
+    left join category c on c.father_id = f.id
     where f.father_id = #{rootCategoryId}
   </select>
 
