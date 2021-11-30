@@ -5,6 +5,7 @@ import cn.myesn.exception.ServiceException;
 import cn.myesn.pojo.Carousel;
 import cn.myesn.pojo.Category;
 import cn.myesn.pojo.vo.CategoryVo;
+import cn.myesn.pojo.vo.HomeItemsVo;
 import cn.myesn.service.CarouselService;
 import cn.myesn.service.CategoryService;
 import io.swagger.annotations.Api;
@@ -54,6 +55,21 @@ public class HomeController {
         }
 
         final List<CategoryVo> categories = categoryService.getSubCategories(rootCategoryId);
+
         return ResponseEntity.ok(categories);
+    }
+
+    @ApiOperation(value = "查询每个一级分类下最新的六个商品", notes = "查询每个一级分类下最新的六个商品", httpMethod = "GET")
+    @GetMapping("category/six-items/{rootCategoryId}")
+    public ResponseEntity<?> categorySixItems(
+            @ApiParam(name = "rootCategoryId", value = "一级分类id", required = true)
+            @PathVariable Integer rootCategoryId) {
+        if (rootCategoryId == null) {
+            throw new ServiceException("一级分类id不能为空");
+        }
+
+        final List<HomeItemsVo> result = categoryService.getHomeSixItems(rootCategoryId);
+
+        return ResponseEntity.ok(result);
     }
 }

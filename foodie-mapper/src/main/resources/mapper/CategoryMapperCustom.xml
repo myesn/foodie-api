@@ -16,6 +16,21 @@
     </collection>
   </resultMap>
 
+  <resultMap id="getHomeSixItemsVo" type="cn.myesn.pojo.vo.HomeItemsVo">
+    <id column="rootCategoryId" property="rootCategoryId" jdbcType="INTEGER" />
+    <result column="rootCategoryName" property="rootCategoryName" jdbcType="VARCHAR" />
+    <result column="rootCategorySlogan" property="rootCategorySlogan" jdbcType="VARCHAR" />
+    <result column="rootCategoryImage" property="rootCategoryImage" jdbcType="VARCHAR" />
+    <result column="rootCategoryBackgroundColor" property="rootCategoryBackgroundColor" jdbcType="VARCHAR" />
+
+    <collection property="items" ofType="cn.myesn.pojo.vo.HomeItemsVo$Item">
+      <id column="itemId" property="itemId" jdbcType="INTEGER" />
+      <result column="itemName" property="itemName" jdbcType="VARCHAR" />
+      <result column="itemUrl" property="itemUrl" jdbcType="VARCHAR" />
+      <result column="createdTime" property="createdTime" jdbcType="DATE" />
+    </collection>
+  </resultMap>
+
   <select id="getSubCategories" resultMap="myCategoryVo" parameterType="int">
     select
       f.id  as id,
@@ -29,6 +44,29 @@
     from category f
     left join category c on c.father_id = f.id
     where f.father_id = #{rootCategoryId}
+  </select>
+
+
+  <select id="getHomeSixItems" resultMap="getHomeSixItemsVo" parameterType="Map">
+    select
+      c.id as rootCategoryId,
+      c.name as rootCategoryName,
+      c.slogan as rootCategorySlogan,
+      c.cat_image as rootCategoryImage,
+      c.bg_color as rootCategoryBackgroundColor,
+      i.id as itemId,
+      i.item_name itemName,
+      ii.url as itemUrl,
+      i.created_time as createdTime
+    from category c
+           left join items i on i.root_cat_id = c.id
+           left join items_img ii on ii.item_id = i.id
+    where
+      c.`type` = 1
+      and i.root_cat_id = #{map.rootCategoryId}
+      and ii.is_main = 1
+    order by i.created_time desc
+    limit 0, 6
   </select>
 
 </mapper>
