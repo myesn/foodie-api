@@ -43,7 +43,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public List<HomeItemsVo> getHomeSixItems(Integer rootCategoryId) {
+    public HomeItemsVo getHomeSixItems(Integer rootCategoryId) {
         Map<String, Object> map = new HashMap<String, Object>() {{
             put("rootCategoryId", rootCategoryId);
         }};

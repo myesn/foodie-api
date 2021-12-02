@@ -68,7 +68,7 @@ public class HomeController {
             throw new ServiceException("一级分类id不能为空");
         }
 
-        final List<HomeItemsVo> result = categoryService.getHomeSixItems(rootCategoryId);
+        final HomeItemsVo result = categoryService.getHomeSixItems(rootCategoryId);
 
         return ResponseEntity.ok(result);
     }

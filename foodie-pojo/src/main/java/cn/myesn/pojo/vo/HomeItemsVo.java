@@ -16,7 +16,7 @@ public final class HomeItemsVo {
 
     @Data
     public static final class Item {
-        private Integer itemId;
+        private String itemId;
         private String itemName;
         private String itemUrl;
         private Date createdTime;

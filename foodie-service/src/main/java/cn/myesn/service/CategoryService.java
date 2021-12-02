@@ -11,5 +11,5 @@ public interface CategoryService {
 
     List<CategoryVo> getSubCategories(Integer rootCategoryId);
 
-    List<HomeItemsVo> getHomeSixItems(Integer rootCategoryId);
+    HomeItemsVo getHomeSixItems(Integer rootCategoryId);
 }
